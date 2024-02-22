@@ -18,6 +18,11 @@ end
 
 dofile(vim.g.base46_cache .. "defaults")
 vim.opt.rtp:prepend(lazypath)
+
 require "plugins"
+
+require('lspconfig').pyright.setup{}
+require('lspconfig').rust_analyzer.setup{}
 vim.o.termbidi = true
 vim.o.relativenumber = true
+vim.opt.guicursor = ""

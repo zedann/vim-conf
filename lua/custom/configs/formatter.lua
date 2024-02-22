@@ -15,6 +15,18 @@ local M = {
     css = {
       require("formatter.filetypes.css").prettier   -- Add CSS formatter
     },
+rust = {
+      function()
+        return {
+          exe = "rustfmt",
+          args = {"--emit=stdout"},
+          stdin = true
+        }
+      end
+    },
+
+
+
     javascriptreact = {
       function()
         return {
